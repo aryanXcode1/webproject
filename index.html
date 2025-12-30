@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aryan Raj | Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f9fbff;
+    color:#111;
+}
+
+/* ---------- NAVBAR ---------- */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:600;
+    color:#2563eb;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-top:80px;
+    text-align:center;
+}
+.hero img{
+    width:180px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(37,99,235,0.4);
+    margin-bottom:25px;
+}
+.hero h1{
+    font-size:3rem;
+}
+.hero span{
+    color:#2563eb;
+}
+.hero p{
+    max-width:600px;
+    margin-top:15px;
+    color:#555;
+}
+.btns a, .btns button{
+    margin:15px;
+    padding:10px 25px;
+    border-radius:30px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+/* ---------- SECTIONS ---------- */
+section{
+    padding:80px 40px;
+    max-width:1100px;
+    margin:auto;
+}
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+/* ---------- SKILLS ---------- */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ---------- CONTACT ---------- */
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    color:#555;
+}
+
+/* ---------- DARK MODE ---------- */
+.dark{
+    background:#0f172a;
+    color:white;
+}
+.dark nav,.dark section,.dark .card,.dark .contact-box{
+    background:#1e293b;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <b>Aryan Raj | ID: 10297</b>
+    <div>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certificates</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <!-- PHOTO (Netlify me upload kar ke same folder me rakho) -->
+    <img src="web netlify photo.png" alt="Aryan Raj">
+
+    <h1>Hi, I'm <span>Aryan Raj</span></h1>
+    <p>B.Tech CSE 1st Year Student | Web Development Enthusiast | AI Learner</p>
+
+    <div id="aiGreeting"></div>
+    <div id="liveTime"></div>
+
+    <div class="btns">
+        <a href="https://github.com/aryanXcode1" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/aryan-raj-980531295" target="_blank">LinkedIn</a>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>My Skills</h2>
+<div class="skills">
+    <div class="card">HTML5</div>
+    <div class="card">CSS3</div>
+    <div class="card">JavaScript (Basics)</div>
+    <div class="card">AI Fundamentals</div>
+    <div class="card">Git & GitHub</div>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certs">
+<h2>Certifications</h2>
+<div class="skills">
+    <div class="card">
+        <b>IBM</b><br>
+        HTML, CSS & JavaScript<br>
+        <a href="https://www.coursera.org/account/accomplishments/verify/6TJ4QCUG540W" target="_blank">View</a>
+    </div>
+    <div class="card">
+        <b>University of Michigan</b><br>
+        Programming in C<br>
+        <a href="https://www.coursera.org/account/accomplishments/verify/0FWSERJP2N45" target="_blank">View</a>
+    </div>
+    <div class="card">
+        <b>NVIDIA</b><br>
+        GenAI for All
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="contact-box">
+<p><b>Email:</b> aryan8709982597@gmail.com</p>
+<p><b>Phone:</b> 9065231453</p>
+
+<form onsubmit="return validateForm()">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send</button>
+</form>
+</div>
+</section>
+
+<footer>
+© 2025 Aryan Raj (10297) | B.Tech CSE
+</footer>
+
+<script>
+/* AI GREETING */
+function aiGreeting(){
+    let h=new Date().getHours();
+    let msg="";
+    if(h<12) msg="🤖 AI: Good Morning!";
+    else if(h<17) msg="🤖 AI: Good Afternoon!";
+    else if(h<21) msg="🤖 AI: Good Evening!";
+    else msg="🤖 AI: Good Night!";
+    document.getElementById("aiGreeting").innerText=msg;
+}
+aiGreeting();
+
+/* LIVE TIME */
+setInterval(()=>{
+    document.getElementById("liveTime").innerText=
+    "Current Time: "+new Date().toLocaleTimeString();
+},1000);
+
+/* DARK MODE */
+function toggleDarkMode(){
+    document.body.classList.toggle("dark");
+}
+
+/* FORM VALIDATION */
+function validateForm(){
+    let n=document.getElementById("name").value;
+    let e=document.getElementById("email").value;
+    if(n==""||e==""){
+        alert("Please fill all fields");
+        return false;
+    }
+    alert("Message Sent Successfully!");
+    return true;
+}
+</script>
+
+</body>
+</html>
